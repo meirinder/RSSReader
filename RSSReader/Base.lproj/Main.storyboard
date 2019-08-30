@@ -39,29 +39,20 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="am9-Aa-gJ7">
                                                     <rect key="frame" x="126" y="15" width="241" height="135"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKr-ia-hmG">
-                                                            <rect key="frame" x="72.5" y="0.0" width="96" height="27"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ol-dv-tS7">
+                                                            <rect key="frame" x="0.0" y="0.0" width="241" height="26"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="27" id="g4j-gH-t5p"/>
+                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="26" id="WHd-Rr-UrZ"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ol-dv-tS7">
-                                                            <rect key="frame" x="99.5" y="27" width="42" height="26"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="26" id="WHd-Rr-UrZ"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9z7-kU-b7c">
-                                                            <rect key="frame" x="8" y="53" width="225" height="82"/>
+                                                            <rect key="frame" x="8" y="26" width="225" height="109"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="VjQ-UQ-Tfq"/>
+                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="VjQ-UQ-Tfq"/>
                                                             </constraints>
                                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -70,7 +61,9 @@
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="9z7-kU-b7c" secondAttribute="trailing" constant="8" id="8EQ-Hf-cYu"/>
+                                                        <constraint firstItem="6Ol-dv-tS7" firstAttribute="leading" secondItem="am9-Aa-gJ7" secondAttribute="leading" id="Z2y-iI-zH4"/>
                                                         <constraint firstItem="9z7-kU-b7c" firstAttribute="leading" secondItem="am9-Aa-gJ7" secondAttribute="leading" constant="8" id="czg-3p-sP8"/>
+                                                        <constraint firstAttribute="trailing" secondItem="6Ol-dv-tS7" secondAttribute="trailing" id="spt-UZ-wPm"/>
                                                     </constraints>
                                                 </stackView>
                                             </subviews>
@@ -83,6 +76,12 @@
                                                 <constraint firstItem="am9-Aa-gJ7" firstAttribute="leading" secondItem="752-W7-kjl" secondAttribute="trailing" constant="8" id="jMc-Im-mF3"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionTextView" destination="9z7-kU-b7c" id="Gjt-AX-5fe"/>
+                                            <outlet property="imageView" destination="752-W7-kjl" id="xRq-Kk-aYv"/>
+                                            <outlet property="newsImageView" destination="752-W7-kjl" id="hKg-om-heu"/>
+                                            <outlet property="titleLabel" destination="6Ol-dv-tS7" id="kJq-GY-Kwf"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

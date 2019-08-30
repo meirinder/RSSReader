@@ -11,11 +11,11 @@ import UIKit
 class RSSViewController: UIViewController {
 
     @IBOutlet weak var newsTableView: UITableView?
-    weak var viewModel: ViewModel?
+    var viewModel: ViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
- 
+        
     }
 
 }
@@ -34,6 +34,5 @@ extension RSSViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
-    
     
 }

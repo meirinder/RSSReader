@@ -10,16 +10,15 @@ import UIKit
 
 class NewsTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var newsImageView: UIImageView? 
+    @IBOutlet weak var titleLabel: UILabel?
+    @IBOutlet weak var descriptionTextView: UITextView?
+    
     static let identifier = "NewsTableViewCell"
     weak var viewModel: NewsTableViewCellViewModel? {
         didSet {
             setCell()
         }
-    }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
     }
     
     private func setCell() {

@@ -21,6 +21,9 @@
 		C4FF94CF231941B1005CBFD2 /* NormalRSSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FF94CE231941B1005CBFD2 /* NormalRSSViewModel.swift */; };
 		C4FF94D1231941BB005CBFD2 /* FavouritesRSSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FF94D0231941BB005CBFD2 /* FavouritesRSSViewModel.swift */; };
 		C4FF94D3231941E5005CBFD2 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FF94D2231941E5005CBFD2 /* ViewModel.swift */; };
+		C4FF94DA231944EC005CBFD2 /* PostsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FF94D9231944EC005CBFD2 /* PostsManager.swift */; };
+		C4FF94DC23194A57005CBFD2 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FF94DB23194A57005CBFD2 /* Post.swift */; };
+		C4FF94DE231952BE005CBFD2 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FF94DD231952BE005CBFD2 /* Enums.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		C4FF94CE231941B1005CBFD2 /* NormalRSSViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalRSSViewModel.swift; sourceTree = "<group>"; };
 		C4FF94D0231941BB005CBFD2 /* FavouritesRSSViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesRSSViewModel.swift; sourceTree = "<group>"; };
 		C4FF94D2231941E5005CBFD2 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		C4FF94D9231944EC005CBFD2 /* PostsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsManager.swift; sourceTree = "<group>"; };
+		C4FF94DB23194A57005CBFD2 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		C4FF94DD231952BE005CBFD2 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,11 +82,11 @@
 				C466332123192A3D004DC89C /* FlowCoordinators */,
 				C466330F2319279A004DC89C /* Main.storyboard */,
 				C4FF94C8231934A8005CBFD2 /* RSSViewController.swift */,
-				C4FF94D2231941E5005CBFD2 /* ViewModel.swift */,
-				C4FF94CE231941B1005CBFD2 /* NormalRSSViewModel.swift */,
-				C4FF94D0231941BB005CBFD2 /* FavouritesRSSViewModel.swift */,
+				C4FF94D42319441A005CBFD2 /* ViewModels */,
 				C4FF94CA23193BA0005CBFD2 /* NewsTableViewCell.swift */,
-				C4FF94CC23193BE9005CBFD2 /* NewsTableViewCellViewModel.swift */,
+				C4FF94DB23194A57005CBFD2 /* Post.swift */,
+				C4FF94DD231952BE005CBFD2 /* Enums.swift */,
+				C4FF94D62319447F005CBFD2 /* Services */,
 				C46633122319279B004DC89C /* Assets.xcassets */,
 				C46633142319279B004DC89C /* LaunchScreen.storyboard */,
 				C46633172319279B004DC89C /* Info.plist */,
@@ -105,6 +111,33 @@
 				C4FF94C523193326005CBFD2 /* NormalFlow.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		C4FF94D42319441A005CBFD2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C4FF94D2231941E5005CBFD2 /* ViewModel.swift */,
+				C4FF94CE231941B1005CBFD2 /* NormalRSSViewModel.swift */,
+				C4FF94D0231941BB005CBFD2 /* FavouritesRSSViewModel.swift */,
+				C4FF94D52319442D005CBFD2 /* Cell */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C4FF94D52319442D005CBFD2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C4FF94CC23193BE9005CBFD2 /* NewsTableViewCellViewModel.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		C4FF94D62319447F005CBFD2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C4FF94D9231944EC005CBFD2 /* PostsManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +215,9 @@
 				C4FF94D1231941BB005CBFD2 /* FavouritesRSSViewModel.swift in Sources */,
 				C466332523193280004DC89C /* FavouritesFlow.swift in Sources */,
 				C4FF94D3231941E5005CBFD2 /* ViewModel.swift in Sources */,
+				C4FF94DE231952BE005CBFD2 /* Enums.swift in Sources */,
+				C4FF94DA231944EC005CBFD2 /* PostsManager.swift in Sources */,
+				C4FF94DC23194A57005CBFD2 /* Post.swift in Sources */,
 				C4FF94CB23193BA0005CBFD2 /* NewsTableViewCell.swift in Sources */,
 				C4FF94C9231934A8005CBFD2 /* RSSViewController.swift in Sources */,
 				C4FF94C623193326005CBFD2 /* NormalFlow.swift in Sources */,

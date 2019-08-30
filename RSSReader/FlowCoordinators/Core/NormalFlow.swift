@@ -18,6 +18,7 @@ class NormalFlow {
     
     func start() {
         guard let viewController = storyboard.instantiateInitialViewController() as? RSSViewController else { return }
+        viewController.viewModel = NormalRSSViewModel()
         self.navigationController.viewControllers = [viewController]
     }
 }

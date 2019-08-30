@@ -9,12 +9,15 @@
 import Foundation
 
 class FavouritesRSSViewModel: ViewModel {
+    private let postsManager = PostsManager.default
+    private var posts: [Post]?
+
     func cellCount() -> Int {
-        <#code#>
+        return posts?.count ?? 0
     }
     
     func viewModelForCell(at index: Int) -> NewsTableViewCellViewModel {
-        <#code#>
+        return NewsTableViewCellViewModel()
     }
     
     
