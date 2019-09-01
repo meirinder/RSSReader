@@ -15,12 +15,12 @@ class AppFlow {
     
     init(with navigationController: UINavigationController) {
         self.navigationController = navigationController
+        self.navigationController.navigationBar.isHidden = true
         coreFlow = CoreFlow(with: navigationController)
     }
     
     func start() {
         coreFlow.start()
     }
-    
     
 }

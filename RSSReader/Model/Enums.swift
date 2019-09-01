@@ -9,6 +9,7 @@
 import Foundation
 
 enum ParseElements: String {
+    case channel = "channel"
     case title = "title"
     case link = "link"
     case pubDate = "pubDate"
@@ -16,4 +17,11 @@ enum ParseElements: String {
     case enclosure = "enclosure"
     case item = "item"
     case url = "url"
+}
+
+enum ImageNames: String {
+    case favouriteImage = "favouriteIcon"
+    case unFavouriteImage = "unFavouriteIcon"
+    case rssTab = "iconTab0"
+    case settings = "conTab1"
 }

@@ -18,7 +18,20 @@ class FavouritesFlow {
     
     func start() {
         guard let viewController = storyboard.instantiateInitialViewController() as? RSSViewController else { return }
-        viewController.viewModel = FavouritesRSSViewModel()
+        let viewModel = FavouritesRSSViewModel()
+        viewModel.actionDelegate = self
+        viewModel.displayDelegate = viewController
+        viewController.viewModel = viewModel
         self.navigationController.viewControllers = [viewController]
     }
+}
+
+extension FavouritesFlow: RSSViewModelActionDelegate {
+    func rssViewModel(rssViewModel: RSSViewModel, showWeb withLink: String) {
+        let webStoryboard = UIStoryboard(name: "Web", bundle: nil)
+        guard let viewController = webStoryboard.instantiateInitialViewController() as? WebViewController else { return }
+        let viewModel = WebViewModel(link: withLink)
+        viewController.viewModel = viewModel
+        self.navigationController.pushViewController(viewController, animated: true)
+    } 
 }
